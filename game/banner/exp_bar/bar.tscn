@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo2evcasbgqf4"]
+
+[sub_resource type="Theme" id="Theme_0pmsq"]
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_jp6cj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_02tui"]
+texture = SubResource("CurveXYZTexture_jp6cj")
+modulate_color = Color(0.286275, 0.87451, 0.87451, 1)
+
+[node name="ProgressBar" type="ProgressBar"]
+z_index = 10
+offset_left = -441.0
+offset_top = 235.0
+offset_right = 439.0
+offset_bottom = 262.0
+theme = SubResource("Theme_0pmsq")
+theme_override_styles/background = SubResource("StyleBoxTexture_02tui")
+value = 50.0

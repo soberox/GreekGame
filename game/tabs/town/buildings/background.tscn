@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c23l2e4pt23on"]
+
+[ext_resource type="Script" path="res://game/tabs/town/buildings/background.gd" id="1_pn6wg"]
+[ext_resource type="Texture2D" uid="uid://bhtghqrdijas4" path="res://assets/background/090c83ab-3faa-42c6-8710-1cefbafcd08e.jpg" id="2_1a1vk"]
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_pn6wg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1a1vk")

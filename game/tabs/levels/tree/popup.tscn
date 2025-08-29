@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu1xktq4gidq5"]
+
+[ext_resource type="Script" path="res://game/tabs/levels/tree/popup.gd" id="1_14cqk"]
+[ext_resource type="Theme" uid="uid://ehsdku3b15en" path="res://assets/scenes/building_town_popup.tres" id="1_alpob"]
+[ext_resource type="Theme" uid="uid://ddxc8vj4yu7ak" path="res://assets/scenes/main_theme.tres" id="2_4h06m"]
+
+[node name="Popup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_vertical = 4
+mouse_filter = 2
+theme = ExtResource("1_alpob")
+script = ExtResource("1_14cqk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PopupPanel" type="PopupPanel" parent="CanvasLayer"]
+unique_name_in_owner = true
+transparent_bg = true
+size = Vector2i(480, 200)
+visible = true
+transparent = true
+mouse_passthrough = true
+min_size = Vector2i(450, 200)
+theme = ExtResource("2_4h06m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PopupPanel"]
+custom_minimum_size = Vector2(450, 150)
+offset_left = 15.0
+offset_top = 4.0
+offset_right = 465.0
+offset_bottom = 190.0
+
+[node name="Label" type="Label" parent="CanvasLayer/PopupPanel/VBoxContainer"]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 45
+text = "name"
+horizontal_alignment = 1
+autowrap_mode = 1
+
+[node name="spacer" type="Control" parent="CanvasLayer/PopupPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="CanvasLayer/PopupPanel/VBoxContainer"]
+custom_minimum_size = Vector2(450, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 35
+text = "description"
+vertical_alignment = 1
+autowrap_mode = 3

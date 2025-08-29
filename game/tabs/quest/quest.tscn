@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cj660vqro420i"]
+
+[ext_resource type="Script" path="res://game/tabs/quest/quest.gd" id="1_6cp1k"]
+[ext_resource type="Script" path="res://game/tabs/quest/tasks/task.gd" id="2_280c2"]
+[ext_resource type="PackedScene" uid="uid://cfb7pt6xax7se" path="res://game/tabs/quest/tasks/spacer.tscn" id="3_hruh1"]
+[ext_resource type="Texture2D" uid="uid://dl67ji1j5c0k8" path="res://icon.svg" id="3_lp6qr"]
+[ext_resource type="Theme" uid="uid://ddxc8vj4yu7ak" path="res://assets/scenes/main_theme.tres" id="4_sullt"]
+
+[sub_resource type="PackedScene" id="PackedScene_pmybe"]
+_bundled = {
+"conn_count": 1,
+"conns": PackedInt32Array(5, 0, 31, 30, 2, 0, 0),
+"editable_instances": [],
+"names": PackedStringArray("Task", "offset_right", "offset_bottom", "size_flags_horizontal", "script", "MarginContainer", "HBoxContainer", "layout_mode", "theme_override_constants/margin_left", "theme_override_constants/margin_right", "VBoxContainer", "Icon", "size_flags_vertical", "texture", "TextureRect", "claim", "theme", "theme_override_font_sizes/font_size", "disabled", "text", "Button", "MarginContainer2", "VBoxContainer2", "name", "z_index", "Label", "custom_minimum_size", "horizontal_alignment", "vertical_alignment", "autowrap_mode", "_on_claim_pressed", "pressed"),
+"node_count": 10,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 5, 0, -1, 4, 1, 0, 2, 1, 3, 2, 4, 3, 0, 0, 0, 6, 6, -1, 1, 7, 4, 0, 1, 0, 5, 5, -1, 3, 7, 4, 8, 5, 9, 5, 0, 2, 0, 10, 10, -1, 1, 7, 4, 0, 3, 0, 14, 11, -1, 3, 7, 4, 12, 6, 13, 7, 0, 3, 0, 20, 15, -1, 6, 7, 4, 12, 6, 16, 8, 17, 9, 18, 10, 19, 11, 0, 1, 0, 5, 21, -1, 2, 7, 4, 3, 2, 0, 6, 0, 10, 22, -1, 2, 7, 4, 3, 2, 0, 7, 0, 25, 23, -1, 4, 24, 2, 7, 4, 17, 12, 19, 13, 0, 7, 0, 25, 25, -1, 8, 26, 14, 7, 4, 3, 2, 17, 15, 19, 16, 27, 17, 28, 17, 29, 2, 0),
+"variants": [1922.0, 163.0, 3, ExtResource("2_280c2"), 2, 30, 4, ExtResource("3_lp6qr"), ExtResource("4_sullt"), 55, true, "claim
+", 50, "Name
+", Vector2(100, 100), 40, "$price", 1],
+"version": 3
+}
+
+[node name="Quest" type="Node2D"]
+script = ExtResource("1_6cp1k")
+task = SubResource("PackedScene_pmybe")
+spacer = ExtResource("3_hruh1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 1918.0
+offset_bottom = 1072.0
+color = Color(1, 0.337255, 0.32549, 1)
+
+[node name="VScrollBar" type="ScrollContainer" parent="."]
+custom_minimum_size = Vector2(960, 330)
+offset_left = 492.0
+offset_top = 366.0
+offset_right = 1452.0
+offset_bottom = 696.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VScrollBar"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3

@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://d37udi1xyijnq"]
+
+[ext_resource type="Script" path="res://game/banner/button_back/disp_icons.gd" id="1_3fysv"]
+
+[node name="disp_icons" type="HBoxContainer"]
+offset_left = -482.0
+offset_top = -231.0
+offset_right = 479.0
+offset_bottom = -134.0
+script = ExtResource("1_3fysv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+size_flags_vertical = 4
+color = Color(0.662668, 0.199479, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+size = Vector2i(39, 31)
+visible = true
+
+[node name="Label" type="Label" parent="PopupPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 35.0
+offset_bottom = 27.0
+text = "text
+"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="ColorRect" to="." method="_on_color_rect_mouse_entered"]
+[connection signal="mouse_exited" from="ColorRect" to="." method="_on_color_rect_mouse_exited"]

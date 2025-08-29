@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5rd11hc5q6r8"]
+
+[ext_resource type="Script" path="res://game/tabs/market/labor/labor.gd" id="1_q1ax3"]
+[ext_resource type="PackedScene" uid="uid://8cqldp0xm8hp" path="res://game/tabs/market/labor/shop/shop_laborer.tscn" id="2_rfq61"]
+[ext_resource type="PackedScene" uid="uid://bac51ew0u7ecj" path="res://game/tabs/market/labor/shop/spacer1.tscn" id="3_1xm36"]
+
+[node name="Labor" type="Node2D"]
+script = ExtResource("1_q1ax3")
+item = ExtResource("2_rfq61")
+spacer = ExtResource("3_1xm36")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 1925.0
+offset_bottom = 1079.0
+color = Color(0.27451, 0.705882, 0.835294, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+offset_left = 492.0
+offset_top = 367.0
+offset_right = 1452.0
+offset_bottom = 696.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3

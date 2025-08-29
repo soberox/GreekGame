@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bmf5jfvi16o3p"]
+
+[node name="MarginContainer3" type="MarginContainer"]
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+
+[node name="Town_button" type="Button" parent="."]
+layout_mode = 2
+text = "TOWN"

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://clvr06vg72fpl"]
+
+[node name="levels" type="HBoxContainer"]
+size_flags_horizontal = 3
+
+[node name="spacer" type="Control" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Level_button" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.75
+text = "Levels"
+
+[node name="spacer2" type="Control" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3

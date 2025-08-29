@@ -1,0 +1,102 @@
+[gd_scene load_steps=4 format=3 uid="uid://be3cginmaiawk"]
+
+[ext_resource type="Script" path="res://game/tabs/town/town.gd" id="1_00uem"]
+[ext_resource type="PackedScene" uid="uid://c6674nqocrqwt" path="res://game/tabs/town/buildings/building.tscn" id="2_8v661"]
+[ext_resource type="PackedScene" uid="uid://c23l2e4pt23on" path="res://game/tabs/town/buildings/background.tscn" id="3_n26mb"]
+
+[node name="Town" type="Node2D"]
+script = ExtResource("1_00uem")
+building = ExtResource("2_8v661")
+
+[node name="Background" parent="." instance=ExtResource("3_n26mb")]
+modulate = Color(0.410825, 0.334531, 0.138788, 1)
+z_index = -1
+position = Vector2(783, 440)
+
+[node name="Sprite2D" parent="Background" index="0"]
+position = Vector2(191.5, 92)
+scale = Vector2(2.02148, 1.0625)
+
+[node name="water" parent="." instance=ExtResource("2_8v661")]
+offset_left = 976.0
+offset_top = 361.0
+offset_right = 1011.0
+offset_bottom = 396.0
+script = null
+
+[node name="PopupPanel2" type="PopupPanel" parent="water"]
+size = Vector2i(157, 31)
+
+[node name="Label" type="Label" parent="water/PopupPanel2"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 153.0
+offset_bottom = 27.0
+text = "Gather some water"
+
+[node name="wood" parent="." instance=ExtResource("2_8v661")]
+offset_left = 1316.0
+offset_top = 371.0
+offset_right = 1351.0
+offset_bottom = 406.0
+script = null
+
+[node name="PopupPanel2" type="PopupPanel" parent="wood"]
+size = Vector2i(142, 31)
+
+[node name="Label" type="Label" parent="wood/PopupPanel2"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 138.0
+offset_bottom = 27.0
+text = "Chop some wood"
+
+[node name="wheat" parent="." instance=ExtResource("2_8v661")]
+offset_left = 872.0
+offset_top = 540.0
+offset_right = 907.0
+offset_bottom = 575.0
+script = null
+
+[node name="PopupPanel2" type="PopupPanel" parent="wheat"]
+size = Vector2i(138, 31)
+
+[node name="Label" type="Label" parent="wheat/PopupPanel2"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 134.0
+offset_bottom = 27.0
+text = "Pick some wheat"
+
+[node name="clay" parent="." instance=ExtResource("2_8v661")]
+offset_left = 739.0
+offset_top = 385.0
+offset_right = 774.0
+offset_bottom = 420.0
+script = null
+
+[node name="Popup" type="PopupPanel" parent="clay"]
+size = Vector2i(122, 31)
+
+[node name="Label" type="Label" parent="clay/Popup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 118.0
+offset_bottom = 27.0
+size_flags_horizontal = 4
+text = "Find some clay"
+
+[connection signal="mouse_entered" from="water" to="." method="_on_water_mouse_entered"]
+[connection signal="mouse_exited" from="water" to="." method="_on_water_mouse_exited"]
+[connection signal="pressed" from="water" to="." method="_on_water_pressed"]
+[connection signal="mouse_entered" from="wood" to="." method="_on_wood_mouse_entered"]
+[connection signal="mouse_exited" from="wood" to="." method="_on_wood_mouse_exited"]
+[connection signal="pressed" from="wood" to="." method="_on_wood_pressed"]
+[connection signal="mouse_entered" from="wheat" to="." method="_on_wheat_mouse_entered"]
+[connection signal="mouse_exited" from="wheat" to="." method="_on_wheat_mouse_exited"]
+[connection signal="pressed" from="wheat" to="." method="_on_wheat_pressed"]
+[connection signal="mouse_entered" from="clay" to="." method="_on_clay_mouse_entered"]
+[connection signal="mouse_exited" from="clay" to="." method="_on_clay_mouse_exited"]
+[connection signal="pressed" from="clay" to="." method="_on_clay_pressed"]
+
+[editable path="Background"]

@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://8cqldp0xm8hp"]
+
+[ext_resource type="Script" path="res://game/tabs/market/labor/shop/shop_laborer.gd" id="1_qmp4p"]
+[ext_resource type="Texture2D" uid="uid://dl67ji1j5c0k8" path="res://icon.svg" id="2_pvukq"]
+[ext_resource type="Theme" uid="uid://ddxc8vj4yu7ak" path="res://assets/scenes/main_theme.tres" id="3_dwyfy"]
+
+[node name="shop_item" type="MarginContainer"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -116.5
+offset_bottom = 116.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_dwyfy")
+script = ExtResource("1_qmp4p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="name" type="Label" parent="VBoxContainer"]
+z_index = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Name
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_pvukq")
+
+[node name="buy" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme = ExtResource("3_dwyfy")
+theme_override_font_sizes/font_size = 55
+text = "Buy"
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 40
+text = "$price"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="auto" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme = ExtResource("3_dwyfy")
+theme_override_font_sizes/font_size = 55
+text = "Slave Driver
+for 100"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/buy" to="." method="_on_buy_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/auto" to="." method="_on_auto_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/auto" to="." method="_on_buy_pressed"]

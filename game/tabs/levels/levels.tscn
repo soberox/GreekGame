@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw37xeucn4h4w"]
+
+[ext_resource type="Script" path="res://game/tabs/levels/levels.gd" id="1_lxtrj"]
+[ext_resource type="PackedScene" uid="uid://dxepglcm8bh2q" path="res://game/tabs/levels/tree/building.tscn" id="2_ptmb7"]
+
+[node name="Levels" type="Node2D"]
+script = ExtResource("1_lxtrj")
+building = ExtResource("2_ptmb7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_right = 1932.0
+offset_bottom = 1088.0
+mouse_filter = 1
+color = Color(0.114897, 0.114897, 0.114897, 1)
+
+[node name="VBoxContainer" type="ScrollContainer" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(960, 330)
+layout_direction = 1
+offset_left = 492.0
+offset_top = 366.0
+offset_right = 1452.0
+offset_bottom = 696.0
+size_flags_horizontal = 3
+
+[node name="Container" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1

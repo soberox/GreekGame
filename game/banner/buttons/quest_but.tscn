@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d1cmtp8inlvif"]
+
+[node name="MarginContainer5" type="MarginContainer"]
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+
+[node name="Quest_button" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "QUEST"
