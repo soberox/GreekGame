@@ -25,3 +25,6 @@ To run the game locally:
   
 4. Open the project in Godot.
 5. Run the project with the Play button
+
+# License
+This project is licensed under the MIT License – see [MIT License](LICENSE)
