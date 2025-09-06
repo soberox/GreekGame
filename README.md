@@ -6,7 +6,7 @@
   I definitely learned a lot from this project, and I plan to keep improving the presentation of the game with the goal of eventually releasing a polished version.
 
 
-#Features
+# Features
 - 14 different buildings!
 - 90+ items!
 - Skill tree progression
@@ -16,6 +16,12 @@
 - quests, and more!
 - More to come!
 
-#Local installation
+# Local installation
 To run the game locally:
-1. use Godot 
+1. use [Godot](https://godotengine.org/)
+2. Clone this repository:
+   '''
+   git clone https://github.com/your-username/your-repo.git
+   '''
+4. Open the project in Godot.
+5. Run the project with the Play button
