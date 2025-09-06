@@ -28,3 +28,15 @@ To run the game locally:
 
 # License
 This project is licensed under the MIT License – see [MIT License](LICENSE)
+
+# Acknowledgments
+I like to acknowledge freinds and collegues who have given me so much support. I also want to cite some resources that where instrumental in this project:
+- https://www.youtube.com/watch?v=2Ftb1MC7rS0
+- https://www.youtube.com/watch?v=LOhfqjmasi0
+- https://www.youtube.com/watch?v=e1zJS31tr88
+- https://www.youtube.com/watch?v=LlA1nrbIujE
+- https://www.youtube.com/watch?v=Q8oee9tRMSc
+- https://www.youtube.com/watch?v=X3J0fSodKgs
+- https://www.youtube.com/watch?v=1iucnMQ520Y
+
+If I failed to mention any other resource that you know let me know.
