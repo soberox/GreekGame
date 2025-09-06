@@ -20,8 +20,8 @@
 To run the game locally:
 1. use [Godot](https://godotengine.org/)
 2. Clone this repository:
-   '''
-   git clone https://github.com/your-username/your-repo.git
-   '''
+   '''bash
+   git clone https://github.com/soberox/GreekGame.git
+  
 4. Open the project in Godot.
 5. Run the project with the Play button
